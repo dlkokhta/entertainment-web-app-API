@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { registrationTypes } from "types/registrationTypes";
+import { registrationTypes } from "types/registrationTypes.js";
 import { v4 as uuid } from "uuid";
 
 const { String } = Schema.Types;
@@ -21,6 +21,6 @@ const registrationSchema = new Schema<registrationTypes>({
   },
 });
 
-const Regisration = model("Regisration", registrationSchema);
+const registrationModel = model("registrationModel", registrationSchema);
 
-export default Regisration;
+export default registrationModel;
