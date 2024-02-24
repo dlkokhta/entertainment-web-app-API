@@ -8,7 +8,7 @@ export const postRegistrationController = async (
   res: Response
 ) => {
   const { body } = req;
-  // console.log("bodyyyyyy", body);
+  
 
   console.log("body.repeatPassword", body.repeatPassword);
 
