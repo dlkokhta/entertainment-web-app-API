@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export const postLoginController = async (req: Request, res: Response) => {
-  try {
+  try {   
     const { email, password } = req.body;
     const user = await RegistrationModel.findOne(
       { email },

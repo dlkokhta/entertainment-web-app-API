@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from "mongoose";
+import { Schema, model } from "mongoose";
 import { v4 as uuid } from "uuid";
 import { allMovieTypes } from "types/allMovieTypes";
 
@@ -39,6 +39,11 @@ const allMoviesSchema = new Schema<allMovieTypes>({
   isTrending: {
     type: Boolean,
     default: true,
+  },
+  movieID: {
+    type: String,
+    required: true,
+    default: uuid,
   },
 });
 

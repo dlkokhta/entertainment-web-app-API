@@ -8,9 +8,6 @@ export const postRegistrationController = async (
   res: Response
 ) => {
   const { body } = req;
-  
-
-  console.log("body.repeatPassword", body.repeatPassword);
 
   if (body.password !== body.repeatPassword) {
     return res.status(400).json({ error: "Password do not match" });
