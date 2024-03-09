@@ -1,10 +1,14 @@
 import { Schema, model } from "mongoose";
-import { v4 as uuid } from "uuid";
 import { allMovieTypes } from "types/allMovieTypes";
 
 const { String } = Schema.Types;
 
 const allMoviesSchema = new Schema<allMovieTypes>({
+  _id: {
+    type: String,
+    required: true,
+  },
+
   title: {
     type: String,
     required: true,
@@ -39,11 +43,6 @@ const allMoviesSchema = new Schema<allMovieTypes>({
   isTrending: {
     type: Boolean,
     default: true,
-  },
-  movieID: {
-    type: String,
-    required: true,
-    default: uuid,
   },
 });
 

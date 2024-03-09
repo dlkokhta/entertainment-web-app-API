@@ -9,7 +9,7 @@ import { getBookmarked } from "../controllers/getBookmarked.js";
 const entertainmentRouter = express.Router();
 entertainmentRouter.post("/register", postRegistrationController);
 entertainmentRouter.post("/login", postLoginController);
-entertainmentRouter.get("/allMovies", verifyToken, getAllMoviesController);
+entertainmentRouter.get("/allMovies", getAllMoviesController);
 entertainmentRouter.post("/postBookmark", verifyToken, postBookmarkController);
 entertainmentRouter.get("/bookmarked", verifyToken, getBookmarked);
 

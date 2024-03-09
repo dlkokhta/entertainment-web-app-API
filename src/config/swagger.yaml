@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: entertainment App API
-  description: Blog API
+  description: entertainment App API
   version: 0.1.9
 
 servers:
@@ -75,8 +75,8 @@ paths:
 
   /api/allMovies:
     get:
-      security:
-        - bearerAuth: []
+      # security:
+      #   - bearerAuth: []
       summary: Retrieve all movies
       tags:
         - Movies
@@ -121,7 +121,7 @@ paths:
                       type: boolean
                     isTrending:
                       type: boolean
-                    movieID:
+                    _id:
                       type: string
 
   paths:
@@ -143,8 +143,8 @@ paths:
                   type: string
                   description: The ID of the user
                   example: "123456"
-                movieID:
-                  type: string
+                _id:
+                  type: []
                   description: The ID of the movie to be bookmarked
                   example: "789012"
       responses:
@@ -202,7 +202,7 @@ paths:
                       type: boolean
                     isTrending:
                       type: boolean
-                    movieID:
+                    _id:
                       type: string
         '401':
           description: Unauthorized - User not authenticated or invalid credentials
