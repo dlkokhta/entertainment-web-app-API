@@ -4,6 +4,7 @@ import { Request, Response } from "express";
 export const getAllMoviesController = async (_: Request, res: Response) => {
   try {
     const allMovies = await allMoviesModel.find();
+    console.log();
     // const ids = allMovies.map((movie) => movie._id);
     // console.log("typeof ids", typeof ids, ids);
     console.log(allMovies);
